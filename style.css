@@ -36,10 +36,79 @@ nav{
 .nav-menu ul li img{
     width: 24px;
     height: 24pxs;
+    cursor: pointer;
 }
 /*Nav menu ends*/
 /*Banner menu starts*/
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+.banner-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.banner-content p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.banner-content button{
+    background-color: #E02C6D;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0px;
+    border-radius: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
 .banner-img img{
     background-image: url("images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    padding: 30px 20px;
 }
 /*Banner menu ends*/
+
+/*Main section starts*/
+.com-img{
+    display: grid;
+    grid-template-areas: 
+    "img-1 img-1 img-1 img-1"
+    "img-2 img-2 img-2";
+}
+.card{
+    margin: 100px auto 50px;
+}
+.card h2{
+    text-align: center;
+    margin: 60px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+}
+.cards{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+@media screen and (max-width: 576px){
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        margin: 100px auto;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+}
